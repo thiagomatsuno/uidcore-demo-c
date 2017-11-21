@@ -1,6 +1,0 @@
-[submodule "uidcore-c"]
-	path = uidcore-c
-    url=https://github.com/thiagomatsuno/uidcore-c.git
-[submodule "paho.mqtt.c"]
-	path = paho.mqtt.c
-    url=https://github.com/uniquid/paho.mqtt.c.git

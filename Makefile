@@ -4,10 +4,11 @@ EXEDIR := bin
 
 LIBS		+= -lcurl -lpthread
 
-EXTRA_LIBS		+= -Wl,-rpath='$$ORIGIN'
+EXTRA_LIBS		+= -Wl,-rpath,'$$ORIGIN'
 EXTRA_LIBS		+= -L./uidcore-c/trezor-crypto -ltrezor-crypto
 EXTRA_LIBS		+= -L./uidcore-c -luidcore-c
 EXTRA_LIBS		+= -L./paho.mqtt.c/build/output/ -lpaho-mqtt3c
+
 
 
 CFLAGS := 
@@ -30,7 +31,7 @@ CFLAGS   += -W \
             -Wformat-security \
             -Werror
 
-EXTRA_CFLAGS	+= -I./uidcore-c -I./paho.mqtt.c/src/ -std=gnu99
+EXTRA_CFLAGS	+= -I./uidcore-c -I./paho.mqtt.c/src/ -I/usr/local/opt/openssl/include -std=gnu99
 
 .PHONY: all
 all: $(EXEDIR)/demo
